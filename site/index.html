@@ -85,7 +85,7 @@
       </nav>
 
       <div class="header-actions">
-        <button class="cart-button" type="button" aria-label="Корзина">
+        <button class="cart-button" id="cartOpen" type="button" aria-label="Открыть корзину" aria-haspopup="dialog" aria-controls="cartDrawer">
           🛒
           <span class="cart-count" id="cartCount" aria-live="polite">0</span>
         </button>
@@ -447,6 +447,38 @@
       </div>
     </section>
   </main>
+
+  <!-- =========================
+       КОРЗИНА (выпадающая панель)
+       ========================= -->
+  <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Корзина" aria-hidden="true">
+    <div class="cart-header">
+      <h2>Корзина <span id="cartItemsLabel" aria-live="polite"></span></h2>
+      <button class="cart-close" id="cartClose" type="button" aria-label="Закрыть корзину">✕</button>
+    </div>
+
+    <div class="cart-body">
+      <div class="cart-empty" id="cartEmpty">
+        <span class="cart-empty-icon" aria-hidden="true">🛒</span>
+        <p>Пока пусто</p>
+        <span>Загляните в каталог и положите в корзину что-нибудь вкусное ☺</span>
+        <a class="btn btn-primary" href="#catalog" id="cartEmptyLink">Перейти в каталог</a>
+      </div>
+
+      <ul class="cart-list" id="cartList"></ul>
+    </div>
+
+    <div class="cart-footer" id="cartFooter" hidden>
+      <div class="cart-total-row">
+        <span>Итого</span>
+        <strong id="cartTotal">0 ₽</strong>
+      </div>
+      <button class="btn btn-primary cart-checkout" id="cartCheckout" type="button">Оформить заказ →</button>
+      <button class="cart-clear" id="cartClear" type="button">Очистить корзину</button>
+    </div>
+  </aside>
 
   <!-- =========================
        FOOTER
