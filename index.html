@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Мармеладная Лавка — натуральный крафтовый мармелад ручной работы.">
+  <title>Мармеладная Лавка — натуральный мармелад</title>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🍓%3C/text%3E%3C/svg%3E">
+  <link rel="canonical" href="https://marmeladlavka.ru/">
+  <meta name="theme-color" content="#d92f68">
+
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="dns-prefetch" href="https://images.unsplash.com">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Мармеладная Лавка">
+  <meta property="og:title" content="Мармеладная Лавка — натуральный мармелад">
+  <meta property="og:description" content="Натуральный крафтовый мармелад ручной работы из ягод, фруктов и хорошего настроения.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=1200&q=85">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Мармеладная Лавка — натуральный мармелад">
+  <meta name="twitter:description" content="Натуральный крафтовый мармелад ручной работы из ягод, фруктов и хорошего настроения.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=1200&q=85">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "name": "Мармеладная Лавка",
+        "description": "Натуральный крафтовый мармелад ручной работы.",
+        "telephone": "+7 (495) 123-45-67",
+        "email": "hello@marmeladlavka.ru",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ул. Ягодная, 12",
+          "addressLocality": "Москва",
+          "addressCountry": "RU"
+        },
+        "openingHours": "Mo-Su 10:00-20:00",
+        "priceRange": "430–520 ₽"
+      },
+      {
+        "@type": "ItemList",
+        "name": "Каталог мармелада",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "item": { "@type": "Product", "name": "Ягодный микс", "description": "Малина, клубника и чёрная смородина.", "offers": { "@type": "Offer", "price": "490", "priceCurrency": "RUB" } } },
+          { "@type": "ListItem", "position": 2, "item": { "@type": "Product", "name": "Цитрусовый бум", "description": "Апельсин, лимон и грейпфрут.", "offers": { "@type": "Offer", "price": "450", "priceCurrency": "RUB" } } },
+          { "@type": "ListItem", "position": 3, "item": { "@type": "Product", "name": "Вишнёвый сад", "description": "Глубокий вишнёвый вкус с лёгкой кислинкой.", "offers": { "@type": "Offer", "price": "470", "priceCurrency": "RUB" } } },
+          { "@type": "ListItem", "position": 4, "item": { "@type": "Product", "name": "Манго-маракуйя", "description": "Тропический дуэт с ароматом манго и маракуйи.", "offers": { "@type": "Offer", "price": "520", "priceCurrency": "RUB" } } },
+          { "@type": "ListItem", "position": 5, "item": { "@type": "Product", "name": "Яблочный сад", "description": "Зелёное яблоко и ваниль.", "offers": { "@type": "Offer", "price": "430", "priceCurrency": "RUB" } } },
+          { "@type": "ListItem", "position": 6, "item": { "@type": "Product", "name": "Клубничное облако", "description": "Нежная клубника с лёгкой кислинкой.", "offers": { "@type": "Offer", "price": "490", "priceCurrency": "RUB" } } }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* =========================
+       БАЗОВЫЕ СТИЛИ
+       ========================= */
+    :root {
+      --berry: #d92f68;
+      --berry-dark: #b51f52;
+      --raspberry: #f04f7c;
+      --orange: #ff8a34;
+      --lemon: #ffd34e;
+      --lime: #9bcf53;
+      --cream: #fffaf2;
+      --paper: #ffffff;
+      --ink: #28252a;
+      --muted: #756f75;
+      --line: #eee5e7;
+      --shadow: 0 18px 50px rgba(72, 34, 48, 0.11);
+      --shadow-small: 0 8px 24px rgba(72, 34, 48, 0.10);
+      --radius: 24px;
+      --container: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 84px;
+    }
+
+    body {
+      min-width: 320px;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -60px;
+      left: 16px;
+      z-index: 200;
+      padding: 10px 18px;
+      color: #fff;
+      background: var(--berry);
+      border-radius: 0 0 12px 12px;
+      font-weight: 800;
+      transition: top 0.2s ease;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--container));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 48px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      color: var(--berry);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 26px;
+      height: 4px;
+      border-radius: 99px;
+      background: linear-gradient(90deg, var(--berry), var(--orange));
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    h1 {
+      font-size: clamp(3.1rem, 7vw, 6.3rem);
+    }
+
+    h2 {
+      font-size: clamp(2.3rem, 4vw, 4rem);
+    }
+
+    h3 {
+      font-size: 1.3rem;
+    }
+
+    .section-heading p {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    /* =========================
+       КНОПКИ
+       ========================= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 52px;
+      padding: 0 23px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 25px rgba(72, 34, 48, 0.16);
+    }
+
+    .btn:active {
+      transform: translateY(1px) scale(0.98);
+    }
+
+    .btn-primary {
+      color: #fff;
+      background: var(--berry);
+      box-shadow: 0 10px 24px rgba(217, 47, 104, 0.24);
+    }
+
+    .btn-primary:hover {
+      background: var(--berry-dark);
+    }
+
+    .btn-light {
+      color: var(--berry-dark);
+      background: #fff;
+    }
+
+    .btn-light:hover {
+      background: #fff4f7;
+    }
+
+    .btn-outline {
+      color: var(--berry);
+      background: transparent;
+      border: 1.5px solid #f0b6c8;
+    }
+
+    .btn-outline:hover {
+      color: #fff;
+      background: var(--berry);
+      border-color: var(--berry);
+    }
+
+    /* =========================
+       HEADER
+       ========================= */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 250, 242, 0.9);
+      border-bottom: 1px solid rgba(238, 229, 231, 0.85);
+      backdrop-filter: blur(16px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--berry), var(--orange));
+      border-radius: 14px 14px 14px 5px;
+      font-size: 1.35rem;
+      transform: rotate(-4deg);
+      box-shadow: 0 7px 18px rgba(217, 47, 104, 0.2);
+    }
+
+    .brand-name {
+      font-size: 1.08rem;
+    }
+
+    .brand-name span {
+      display: block;
+      color: var(--berry);
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav a {
+      position: relative;
+      color: #514b50;
+      font-size: 0.94rem;
+      font-weight: 700;
+      transition: color 0.2s ease;
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 100%;
+      height: 2px;
+      border-radius: 99px;
+      background: var(--berry);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.2s ease;
+    }
+
+    .nav a:hover {
+      color: var(--berry);
+    }
+
+    .nav a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .cart-button {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      color: var(--berry);
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      font-size: 1.15rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cart-button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-small);
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -3px;
+      right: -2px;
+      display: grid;
+      place-items: center;
+      min-width: 19px;
+      height: 19px;
+      padding: 0 5px;
+      color: #fff;
+      background: var(--berry);
+      border: 2px solid var(--cream);
+      border-radius: 999px;
+      font-size: 0.66rem;
+      font-weight: 900;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 45px;
+      height: 45px;
+      color: var(--ink);
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      font-size: 1.25rem;
+    }
+
+    /* =========================
+       HERO
+       ========================= */
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 76px);
+      display: grid;
+      align-items: center;
+      overflow: hidden;
+      padding: 75px 0 90px;
+      background:
+        radial-gradient(circle at 88% 20%, rgba(255, 211, 78, 0.27), transparent 24%),
+        radial-gradient(circle at 7% 90%, rgba(240, 79, 124, 0.13), transparent 30%),
+        var(--cream);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 370px;
+      height: 370px;
+      right: -190px;
+      top: 12%;
+      background: rgba(155, 207, 83, 0.12);
+    }
+
+    .hero::after {
+      width: 230px;
+      height: 230px;
+      left: -120px;
+      bottom: 8%;
+      background: rgba(255, 138, 52, 0.1);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .hero-copy {
+      max-width: 640px;
+    }
+
+    .hero h1 span {
+      color: var(--berry);
+      display: inline-block;
+    }
+
+    .hero-text {
+      max-width: 540px;
+      margin: 25px 0 31px;
+      color: var(--muted);
+      font-size: clamp(1.03rem, 1.8vw, 1.22rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .hero-note {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      margin-top: 25px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .hero-note strong {
+      color: var(--ink);
+    }
+
+    .hero-note-icon {
+      display: grid;
+      place-items: center;
+      width: 31px;
+      height: 31px;
+      background: #fff1a9;
+      border-radius: 50%;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 540px;
+      display: grid;
+      place-items: center;
+    }
+
+    .hero-photo-wrap {
+      position: relative;
+      width: min(100%, 570px);
+      aspect-ratio: 1 / 0.92;
+      padding: 12px;
+      background: #fff;
+      border-radius: 45% 55% 50% 42% / 45% 42% 58% 55%;
+      box-shadow: var(--shadow);
+      transform: rotate(2deg);
+    }
+
+    .hero-photo-wrap::before {
+      content: "";
+      position: absolute;
+      inset: -18px;
+      z-index: -1;
+      border: 2px dashed #f3bdca;
+      border-radius: inherit;
+      transform: rotate(-6deg);
+    }
+
+    .hero-photo {
+      height: 100%;
+      object-fit: cover;
+      border-radius: 40% 52% 46% 38% / 42% 38% 55% 50%;
+    }
+
+    .sticker {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      width: 120px;
+      height: 120px;
+      color: #fff;
+      background: var(--berry);
+      border: 8px solid var(--cream);
+      border-radius: 50%;
+      box-shadow: 0 15px 30px rgba(72, 34, 48, 0.16);
+      font-size: 0.82rem;
+      font-weight: 900;
+      text-align: center;
+      line-height: 1.25;
+      transform: rotate(-11deg);
+    }
+
+    .sticker-top {
+      top: 1%;
+      right: 0;
+    }
+
+    .sticker-bottom {
+      bottom: 3%;
+      left: 2%;
+      width: 100px;
+      height: 100px;
+      background: var(--orange);
+      transform: rotate(8deg);
+    }
+
+    .fruit-dot {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      width: 53px;
+      height: 53px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: var(--shadow-small);
+      font-size: 1.45rem;
+    }
+
+    .dot-one { top: 15%; left: 0; }
+    .dot-two { right: 2%; bottom: 20%; }
+    .dot-three { right: 15%; bottom: 0; }
+
+    /* =========================
+       ПРЕИМУЩЕСТВА
+       ========================= */
+    .benefits {
+      background: #fff;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .benefit-card {
+      padding: 28px 24px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+    }
+
+    .benefit-icon {
+      display: grid;
+      place-items: center;
+      width: 56px;
+      height: 56px;
+      margin-bottom: 21px;
+      background: #fff0f4;
+      border-radius: 18px;
+      font-size: 1.6rem;
+    }
+
+    .benefit-card:nth-child(2) .benefit-icon { background: #fff5d8; }
+    .benefit-card:nth-child(3) .benefit-icon { background: #edf8df; }
+    .benefit-card:nth-child(4) .benefit-icon { background: #fff0e4; }
+
+    .benefit-card p {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    /* =========================
+       КАТАЛОГ
+       ========================= */
+    .catalog {
+      background:
+        radial-gradient(circle at 100% 0%, rgba(255, 211, 78, 0.16), transparent 28%),
+        var(--cream);
+    }
+
+    .catalog-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      overflow: hidden;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 7px 25px rgba(72, 34, 48, 0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+    }
+
+    .product-image {
+      position: relative;
+      aspect-ratio: 1 / 0.78;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.06);
+    }
+
+    .tag {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      padding: 7px 11px;
+      color: var(--berry-dark);
+      background: #fff;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 900;
+      box-shadow: 0 6px 16px rgba(72, 34, 48, 0.11);
+    }
+
+    .product-body {
+      padding: 22px;
+    }
+
+    .product-body h3 {
+      font-size: 1.22rem;
+    }
+
+    .product-body p {
+      min-height: 48px;
+      margin: 9px 0 18px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .product-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .price {
+      color: var(--berry-dark);
+      font-size: 1.25rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .product-bottom .btn {
+      min-height: 44px;
+      padding-inline: 17px;
+      font-size: 0.88rem;
+    }
+
+    /* =========================
+       ЗАКАЗ
+       ========================= */
+    .order {
+      color: #fff;
+      background: var(--berry);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .order::before {
+      content: "";
+      position: absolute;
+      width: 480px;
+      height: 480px;
+      right: -160px;
+      top: -250px;
+      background: rgba(255, 255, 255, 0.09);
+      border-radius: 50%;
+    }
+
+    .order .eyebrow {
+      color: #ffd8e4;
+    }
+
+    .order .eyebrow::before {
+      background: var(--lemon);
+    }
+
+    .order .section-heading p {
+      color: #f7dbe4;
+    }
+
+    .steps {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      position: relative;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.17);
+      border-radius: var(--radius);
+      backdrop-filter: blur(8px);
+    }
+
+    .step-number {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 22px;
+      color: var(--berry);
+      background: var(--lemon);
+      border-radius: 50%;
+      font-weight: 900;
+    }
+
+    .step p {
+      margin-top: 9px;
+      color: #f8dfe7;
+      font-size: 0.93rem;
+    }
+
+    .delivery-note {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 26px;
+      padding: 20px 23px;
+      color: #4c2530;
+      background: #fff4cf;
+      border-radius: 18px;
+    }
+
+    .delivery-note-icon {
+      font-size: 1.5rem;
+    }
+
+    .delivery-note strong {
+      display: block;
+    }
+
+    .delivery-note-text span {
+      display: block;
+      font-size: 0.9rem;
+    }
+
+    /* =========================
+       КОНТАКТЫ
+       ========================= */
+    .contacts {
+      background: #fff;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .contact-item-icon {
+      display: grid;
+      place-items: center;
+      flex: 0 0 45px;
+      width: 45px;
+      height: 45px;
+      background: #fff0f4;
+      border-radius: 14px;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .contact-item span,
+    .contact-item a {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .socials {
+      display: flex;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .social {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      color: var(--berry);
+      background: #fff0f4;
+      border-radius: 13px;
+      font-weight: 900;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .social:hover {
+      color: #fff;
+      background: var(--berry);
+      transform: translateY(-3px);
+    }
+
+    .contact-form {
+      padding: 34px;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow-small);
+    }
+
+    .contact-form h3 {
+      font-size: 1.6rem;
+    }
+
+    .contact-form > p {
+      margin: 8px 0 23px;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    .field label {
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .field input,
+    .field textarea {
+      width: 100%;
+      padding: 13px 15px;
+      color: var(--ink);
+      background: #fff;
+      border: 1.5px solid #eadfe2;
+      border-radius: 13px;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .field textarea {
+      min-height: 105px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: #ee7fa0;
+      box-shadow: 0 0 0 4px rgba(217, 47, 104, 0.08);
+    }
+
+    .form-submit {
+      width: 100%;
+      margin-top: 17px;
+    }
+
+    /* =========================
+       FOOTER / НАВЕРХ
+       ========================= */
+    .footer {
+      padding: 27px 0;
+      color: #d7b8c1;
+      background: #351f28;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer .brand {
+      color: #fff;
+    }
+
+    .footer .brand-mark {
+      box-shadow: none;
+    }
+
+    .copyright {
+      font-size: 0.82rem;
+    }
+
+    .to-top {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 90;
+      display: grid;
+      place-items: center;
+      width: 50px;
+      height: 50px;
+      color: #fff;
+      background: var(--berry);
+      border-radius: 50%;
+      box-shadow: 0 10px 25px rgba(217, 47, 104, 0.3);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(15px);
+      transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease, background 0.2s ease;
+    }
+
+    .to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .to-top:hover {
+      background: var(--berry-dark);
+      transform: translateY(-4px);
+    }
+
+    /* =========================
+       АНИМАЦИЯ ПОЯВЛЕНИЯ
+       ========================= */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================
+       АДАПТИВНОСТЬ
+       ========================= */
+    @media (max-width: 1050px) {
+      .hero-grid {
+        gap: 35px;
+      }
+
+      .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav {
+        gap: 18px;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .section {
+        padding: 75px 0;
+      }
+
+      .header-inner {
+        min-height: 68px;
+      }
+
+      .nav {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        top: calc(100% + 8px);
+        display: grid;
+        gap: 0;
+        padding: 8px;
+        background: rgba(255, 250, 242, 0.98);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+      }
+
+      .nav.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .nav a {
+        padding: 13px 14px;
+        border-radius: 12px;
+      }
+
+      .nav a:hover {
+        background: #fff0f4;
+      }
+
+      .nav a::after {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: auto;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 65px 0 75px;
+      }
+
+      .hero-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        max-width: 720px;
+      }
+
+      .hero-visual {
+        min-height: 420px;
+      }
+
+      .contact-grid {
+        gap: 45px;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(calc(100% - 28px), var(--container));
+      }
+
+      .section {
+        padding: 62px 0;
+      }
+
+      .brand-name {
+        font-size: 0.95rem;
+      }
+
+      .brand-mark {
+        width: 39px;
+        height: 39px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.8rem, 15vw, 4.4rem);
+      }
+
+      .hero-actions {
+        display: grid;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .hero-visual {
+        min-height: 335px;
+        margin-top: 10px;
+      }
+
+      .hero-photo-wrap {
+        width: 92%;
+      }
+
+      .sticker-top {
+        right: -3px;
+        width: 90px;
+        height: 90px;
+        border-width: 5px;
+        font-size: 0.67rem;
+      }
+
+      .sticker-bottom {
+        left: -2px;
+        width: 76px;
+        height: 76px;
+        border-width: 5px;
+        font-size: 0.62rem;
+      }
+
+      .fruit-dot {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+      }
+
+      .dot-one { left: -2px; }
+      .dot-two { right: -1px; }
+
+      .benefits-grid,
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .catalog-top {
+        display: block;
+      }
+
+      .product-body p {
+        min-height: 0;
+      }
+
+      .contact-form {
+        padding: 24px 19px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .to-top {
+        right: 16px;
+        bottom: 16px;
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <!-- =========================
+       ШАПКА
+       ========================= -->
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Мармеладная Лавка — на главную">
+        <span class="brand-mark" aria-hidden="true">🍓</span>
+        <span class="brand-name">
+          Мармеладная Лавка
+          <span>сладко. честно. вручную.</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="mainNav" aria-label="Основная навигация">
+        <a href="#about">О нас</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#order">Как заказать</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-button" type="button" aria-label="Корзина">
+          🛒
+          <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+        </button>
+        <button class="menu-toggle" type="button" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- =========================
+         HERO
+         ========================= -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy fade-in">
+          <p class="eyebrow">Маленькая сладкая радость</p>
+          <h1>Мармелад, который <span>хочется</span> съесть весь.</h1>
+          <p class="hero-text">
+            Натуральный мармелад ручной работы — из ягод, фруктов и хорошего настроения.
+            Варим небольшими партиями, чтобы каждый кусочек был ярким и настоящим.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#catalog">Перейти в каталог →</a>
+            <a class="btn btn-outline" href="#about">Почему мы?</a>
+          </div>
+
+          <div class="hero-note">
+            <span class="hero-note-icon" aria-hidden="true">✓</span>
+            <span><strong>100% натуральный состав</strong> — ничего лишнего</span>
+          </div>
+        </div>
+
+        <div class="hero-visual fade-in">
+          <div class="hero-photo-wrap">
+            <img
+              class="hero-photo"
+              src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=1100&q=85"
+              alt="Яркие фруктовые сладости"
+              width="1100"
+              height="1012"
+              fetchpriority="high"
+              decoding="async"
+            >
+          </div>
+          <div class="sticker sticker-top">РУЧНАЯ<br>РАБОТА</div>
+          <div class="sticker sticker-bottom">ЯГОДЫ<br>🍓</div>
+          <span class="fruit-dot dot-one" aria-hidden="true">🍊</span>
+          <span class="fruit-dot dot-two" aria-hidden="true">🍋</span>
+          <span class="fruit-dot dot-three" aria-hidden="true">🍒</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         О НАС / ПРЕИМУЩЕСТВА
+         ========================= -->
+    <section class="section benefits" id="about">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">За что нас любят</p>
+          <h2>Состав простой.<br>Вкус — совсем нет.</h2>
+          <p>Мы не прячем вкус фруктов за ароматизаторами. Только понятные ингредиенты и немного магии.</p>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="benefit-card fade-in">
+            <div class="benefit-icon" aria-hidden="true">🍓</div>
+            <h3>Настоящие ягоды</h3>
+            <p>Используем фруктовые и ягодные пюре с насыщенным натуральным вкусом.</p>
+          </article>
+
+          <article class="benefit-card fade-in">
+            <div class="benefit-icon" aria-hidden="true">🌿</div>
+            <h3>Без красителей</h3>
+            <p>Цвет — от самих фруктов и ягод. Никаких искусственных добавок.</p>
+          </article>
+
+          <article class="benefit-card fade-in">
+            <div class="benefit-icon" aria-hidden="true">👐</div>
+            <h3>Всё вручную</h3>
+            <p>Варим небольшими партиями, нарезаем и упаковываем с заботой.</p>
+          </article>
+
+          <article class="benefit-card fade-in">
+            <div class="benefit-icon" aria-hidden="true">✨</div>
+            <h3>Свежая партия</h3>
+            <p>Не храним горы готового товара — готовим мармелад регулярно и свежим.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         КАТАЛОГ
+         ========================= -->
+    <section class="section catalog" id="catalog">
+      <div class="container">
+        <div class="catalog-top section-heading fade-in">
+          <div>
+            <p class="eyebrow">Витрина</p>
+            <h2>Выбирайте свой<br>вкусный повод.</h2>
+            <p>Шесть любимчиков Мармеладной Лавки — от сочных ягод до бодрящих цитрусов.</p>
+          </div>
+        </div>
+
+        <div class="products">
+          <article class="product-card fade-in">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1575377427642-087cf684f29d?auto=format&fit=crop&w=900&q=85"
+                alt="Ягодный мармелад"
+                width="900"
+                height="702"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="tag">ХИТ</span>
+            </div>
+            <div class="product-body">
+              <h3>Ягодный микс</h3>
+              <p>Малина, клубника и чёрная смородина — мягкий кисло-сладкий баланс.</p>
+              <div class="product-bottom">
+                <span class="price">490 ₽</span>
+                <button class="btn btn-primary add-to-cart" type="button" data-product="Ягодный микс">В корзину</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card fade-in">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=900&q=85"
+                alt="Цитрусовый мармелад"
+                width="900"
+                height="702"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="tag">НОВИНКА</span>
+            </div>
+            <div class="product-body">
+              <h3>Цитрусовый бум</h3>
+              <p>Апельсин, лимон и грейпфрут. Ярко, свежо и с приятной горчинкой.</p>
+              <div class="product-bottom">
+                <span class="price">450 ₽</span>
+                <button class="btn btn-primary add-to-cart" type="button" data-product="Цитрусовый бум">В корзину</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card fade-in">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=900&q=85"
+                alt="Вишнёвый мармелад"
+                width="900"
+                height="702"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="tag">ХИТ</span>
+            </div>
+            <div class="product-body">
+              <h3>Вишнёвый сад</h3>
+              <p>Глубокий вишнёвый вкус с лёгкой кислинкой и бархатным послевкусием.</p>
+              <div class="product-bottom">
+                <span class="price">470 ₽</span>
+                <button class="btn btn-primary add-to-cart" type="button" data-product="Вишнёвый сад">В корзину</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card fade-in">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85"
+                alt="Манговый мармелад"
+                width="900"
+                height="702"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="tag">ЭКЗОТИКА</span>
+            </div>
+            <div class="product-body">
+              <h3>Манго-маракуйя</h3>
+              <p>Солнечный тропический дуэт с ароматом спелого манго и маракуйи.</p>
+              <div class="product-bottom">
+                <span class="price">520 ₽</span>
+                <button class="btn btn-primary add-to-cart" type="button" data-product="Манго-маракуйя">В корзину</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card fade-in">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?auto=format&fit=crop&w=900&q=85"
+                alt="Яблочный мармелад"
+                width="900"
+                height="702"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="tag">НЕЖНЫЙ</span>
+            </div>
+            <div class="product-body">
+              <h3>Яблочный сад</h3>
+              <p>Зелёное яблоко и ваниль — нежный, домашний и очень уютный вкус.</p>
+              <div class="product-bottom">
+                <span class="price">430 ₽</span>
+                <button class="btn btn-primary add-to-cart" type="button" data-product="Яблочный сад">В корзину</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card fade-in">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=900&q=85"
+                alt="Клубничный мармелад"
+                width="900"
+                height="702"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="tag">ПОДАРОК</span>
+            </div>
+            <div class="product-body">
+              <h3>Клубничное облако</h3>
+              <p>Нежная клубника с лёгкой кислинкой — тот самый вкус первого лета.</p>
+              <div class="product-bottom">
+                <span class="price">490 ₽</span>
+                <button class="btn btn-primary add-to-cart" type="button" data-product="Клубничное облако">В корзину</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         КАК ЗАКАЗАТЬ
+         ========================= -->
+    <section class="section order" id="order">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">Как заказать</p>
+          <h2>Три шага — и мармелад уже в пути.</h2>
+          <p>Оформить заказ можно онлайн, а если хочется поговорить о вкусах — просто позвоните нам.</p>
+        </div>
+
+        <div class="steps">
+          <article class="step fade-in">
+            <div class="step-number">01</div>
+            <h3>Выбираете</h3>
+            <p>Соберите свою коробку из любимых вкусов или возьмите готовый набор.</p>
+          </article>
+
+          <article class="step fade-in">
+            <div class="step-number">02</div>
+            <h3>Оформляете</h3>
+            <p>Оставьте контакты и удобный способ получения — мы подтвердим заказ.</p>
+          </article>
+
+          <article class="step fade-in">
+            <div class="step-number">03</div>
+            <h3>Получаете</h3>
+            <p>Передаём заказ курьеру или ждём вас в нашей лавке. Осталось только открыть коробку.</p>
+          </article>
+        </div>
+
+        <div class="delivery-note fade-in">
+          <span class="delivery-note-icon" aria-hidden="true">🚚</span>
+          <div class="delivery-note-text">
+            <strong>Доставка от 300 ₽</strong>
+            <span>По городу — в день заказа при оформлении до 16:00. По России отправляем транспортными службами.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         КОНТАКТЫ
+         ========================= -->
+    <section class="section contacts" id="contacts">
+      <div class="container contact-grid">
+        <div class="fade-in">
+          <p class="eyebrow">Мы на связи</p>
+          <h2>Заходите в гости<br>или пишите нам.</h2>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">📍</div>
+              <div>
+                <strong>Адрес</strong>
+                <span>ул. Ягодная, 12, Москва</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">📞</div>
+              <div>
+                <strong>Телефон</strong>
+                <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">✉️</div>
+              <div>
+                <strong>Почта</strong>
+                <a href="mailto:hello@marmeladlavka.ru">hello@marmeladlavka.ru</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">🕐</div>
+              <div>
+                <strong>Часы работы</strong>
+                <span>Пн–Вс: 10:00–20:00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="socials" aria-label="Социальные сети">
+            <a class="social" href="https://vk.com/" target="_blank" rel="noopener" aria-label="ВКонтакте">VK</a>
+            <a class="social" href="https://t.me/" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+            <a class="social" href="https://ok.ru/" target="_blank" rel="noopener" aria-label="Одноклассники">OK</a>
+          </div>
+        </div>
+
+        <form class="contact-form fade-in" id="contactForm">
+          <h3>Есть вопрос?</h3>
+          <p>Оставьте контакты — мы свяжемся с вами и всё подскажем.</p>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Ваше имя</label>
+              <input id="name" name="name" type="text" placeholder="Например, Анна" required>
+            </div>
+
+            <div class="field">
+              <label for="phone">Телефон</label>
+              <input id="phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required>
+            </div>
+
+            <div class="field full">
+              <label for="message">Сообщение</label>
+              <textarea id="message" name="message" placeholder="Например, хочу собрать подарочный набор..."></textarea>
+            </div>
+          </div>
+
+          <button class="btn btn-primary form-submit" type="submit">Отправить сообщение →</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">🍓</span>
+        <span class="brand-name">Мармеладная Лавка</span>
+      </a>
+      <span class="copyright">© 2026 Мармеладная Лавка. Сделано с любовью и ягодами.</span>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Наверх">↑</button>
+
+  <script>
+    // =========================
+    // МОБИЛЬНОЕ МЕНЮ
+    // =========================
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    mainNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && mainNav.classList.contains("open")) {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+        menuToggle.focus();
+      }
+    });
+
+    // =========================
+    // КНОПКА "НАВЕРХ"
+    // =========================
+    const toTop = document.getElementById("toTop");
+
+    window.addEventListener("scroll", () => {
+      toTop.classList.toggle("visible", window.scrollY > 500);
+    }, { passive: true });
+
+    toTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // =========================
+    // ПЛАВНОЕ ПОЯВЛЕНИЕ БЛОКОВ
+    // =========================
+    const animatedElements = document.querySelectorAll(".fade-in");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      animatedElements.forEach(el => observer.observe(el));
+    } else {
+      animatedElements.forEach(el => el.classList.add("is-visible"));
+    }
+
+    // =========================
+    // ДЕМО-КОРЗИНА
+    // =========================
+    const cartCount = document.getElementById("cartCount");
+    const addButtons = document.querySelectorAll(".add-to-cart");
+    let cartItems = 0;
+
+    addButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        cartItems += 1;
+        cartCount.textContent = cartItems;
+
+        const originalText = button.textContent;
+        button.textContent = "✓ Добавлено";
+        button.style.background = "#9bcf53";
+
+        setTimeout(() => {
+          button.textContent = originalText;
+          button.style.background = "";
+        }, 1100);
+      });
+    });
+
+    // =========================
+    // ФОРМА ОБРАТНОЙ СВЯЗИ
+    // =========================
+    const contactForm = document.getElementById("contactForm");
+
+    contactForm.addEventListener("submit", event => {
+      event.preventDefault();
+
+      const submitButton = contactForm.querySelector("button[type='submit']");
+      const originalText = submitButton.textContent;
+
+      submitButton.textContent = "✓ Спасибо! Мы свяжемся с вами";
+      submitButton.disabled = true;
+
+      setTimeout(() => {
+        contactForm.reset();
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+      }, 2500);
+    });
+  </script>
+</body>
+</html>
