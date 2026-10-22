@@ -1,0 +1,59 @@
+{
+  "shop": {
+    "name": "Мармеладная Лавка",
+    "phone": "+7 (495) 123-45-67",
+    "phoneHref": "+74951234567",
+    "email": "hello@marmeladlavka.ru",
+    "priceRange": "от 430 ₽"
+  },
+  "products": [
+    {
+      "id": "yagodny-miks",
+      "name": "Ягодный микс",
+      "tag": "ХИТ",
+      "price": 490,
+      "description": "Малина, клубника и чёрная смородина — мягкий кисло-сладкий баланс.",
+      "image": "https://images.unsplash.com/photo-1575377427642-087cf684f29d?auto=format&fit=crop&w=900&q=85"
+    },
+    {
+      "id": "citrusovy-bum",
+      "name": "Цитрусовый бум",
+      "tag": "НОВИНКА",
+      "price": 450,
+      "description": "Апельсин, лимон и грейпфрут. Ярко, свежо и с приятной горчинкой.",
+      "image": "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=900&q=85"
+    },
+    {
+      "id": "vishnyovy-sad",
+      "name": "Вишнёвый сад",
+      "tag": "ХИТ",
+      "price": 470,
+      "description": "Глубокий вишнёвый вкус с лёгкой кислинкой и бархатным послевкусием.",
+      "image": "https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=900&q=85"
+    },
+    {
+      "id": "mango-marakuya",
+      "name": "Манго-маракуйя",
+      "tag": "ЭКЗОТИКА",
+      "price": 520,
+      "description": "Солнечный тропический дуэт с ароматом спелого манго и маракуйи.",
+      "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85"
+    },
+    {
+      "id": "yablochny-sad",
+      "name": "Яблочный сад",
+      "tag": "НЕЖНЫЙ",
+      "price": 430,
+      "description": "Зелёное яблоко и ваниль — нежный, домашний и очень уютный вкус.",
+      "image": "https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?auto=format&fit=crop&w=900&q=85"
+    },
+    {
+      "id": "klubnichnoe-oblako",
+      "name": "Клубничное облако",
+      "tag": "ПОДАРОК",
+      "price": 490,
+      "description": "Нежная клубника с лёгкой кислинкой — тот самый вкус первого лета.",
+      "image": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=900&q=85"
+    }
+  ]
+}

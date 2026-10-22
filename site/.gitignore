@@ -1,0 +1,18 @@
+# Зависимости и сборка
+node_modules/
+dist/
+build/
+
+# Кэши и временные файлы
+.DS_Store
+Thumbs.db
+*.log
+.cache/
+
+# IDE
+.vscode/
+.idea/
+
+# Переменные окружения и секреты
+.env
+.env.*

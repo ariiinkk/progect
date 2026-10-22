@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Мармеладная Лавка — натуральный крафтовый мармелад ручной работы.">
+  <title>Мармеладная Лавка — натуральный мармелад</title>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🍓%3C/text%3E%3C/svg%3E">
+  <link rel="canonical" href="https://marmeladlavka.ru/">
+  <meta name="theme-color" content="#d92f68">
+
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="dns-prefetch" href="https://images.unsplash.com">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Мармеладная Лавка">
+  <meta property="og:title" content="Мармеладная Лавка — натуральный мармелад">
+  <meta property="og:description" content="Натуральный крафтовый мармелад ручной работы из ягод, фруктов и хорошего настроения.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=1200&q=85">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Мармеладная Лавка — натуральный мармелад">
+  <meta name="twitter:description" content="Натуральный крафтовый мармелад ручной работы из ягод, фруктов и хорошего настроения.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=1200&q=85">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "name": "Мармеладная Лавка",
+        "description": "Натуральный крафтовый мармелад ручной работы.",
+        "telephone": "+7 (495) 123-45-67",
+        "email": "hello@marmeladlavka.ru",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ул. Ягодная, 12",
+          "addressLocality": "Москва",
+          "addressCountry": "RU"
+        },
+        "openingHours": "Mo-Su 10:00-20:00",
+        "priceRange": "430–520 ₽"
+      },
+      {
+        "@type": "ItemList",
+        "name": "Каталог мармелада",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "item": { "@type": "Product", "name": "Ягодный микс", "description": "Малина, клубника и чёрная смородина.", "offers": { "@type": "Offer", "price": "490", "priceCurrency": "RUB" } } },
+          { "@type": "ListItem", "position": 2, "item": { "@type": "Product", "name": "Цитрусовый бум", "description": "Апельсин, лимон и грейпфрут.", "offers": { "@type": "Offer", "price": "450", "priceCurrency": "RUB" } } },
+          { "@type": "ListItem", "position": 3, "item": { "@type": "Product", "name": "Вишнёвый сад", "description": "Глубокий вишнёвый вкус с лёгкой кислинкой.", "offers": { "@type": "Offer", "price": "470", "priceCurrency": "RUB" } } },
+          { "@type": "ListItem", "position": 4, "item": { "@type": "Product", "name": "Манго-маракуйя", "description": "Тропический дуэт с ароматом манго и маракуйи.", "offers": { "@type": "Offer", "price": "520", "priceCurrency": "RUB" } } },
+          { "@type": "ListItem", "position": 5, "item": { "@type": "Product", "name": "Яблочный сад", "description": "Зелёное яблоко и ваниль.", "offers": { "@type": "Offer", "price": "430", "priceCurrency": "RUB" } } },
+          { "@type": "ListItem", "position": 6, "item": { "@type": "Product", "name": "Клубничное облако", "description": "Нежная клубника с лёгкой кислинкой.", "offers": { "@type": "Offer", "price": "490", "priceCurrency": "RUB" } } }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body id="top">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <!-- =========================
+       ШАПКА
+       ========================= -->
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Мармеладная Лавка — на главную">
+        <span class="brand-mark" aria-hidden="true">🍓</span>
+        <span class="brand-name">
+          Мармеладная Лавка
+          <span>сладко. честно. вручную.</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="mainNav" aria-label="Основная навигация">
+        <a href="#about">О нас</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#order">Как заказать</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-button" type="button" aria-label="Корзина">
+          🛒
+          <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+        </button>
+        <button class="menu-toggle" type="button" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- =========================
+         HERO
+         ========================= -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy fade-in">
+          <p class="eyebrow">Маленькая сладкая радость</p>
+          <h1>Мармелад, который <span>хочется</span> съесть весь.</h1>
+          <p class="hero-text">
+            Натуральный мармелад ручной работы — из ягод, фруктов и хорошего настроения.
+            Варим небольшими партиями, чтобы каждый кусочек был ярким и настоящим.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#catalog">Перейти в каталог →</a>
+            <a class="btn btn-outline" href="#about">Почему мы?</a>
+          </div>
+
+          <div class="hero-note">
+            <span class="hero-note-icon" aria-hidden="true">✓</span>
+            <span><strong>100% натуральный состав</strong> — ничего лишнего</span>
+          </div>
+        </div>
+
+        <div class="hero-visual fade-in">
+          <div class="hero-photo-wrap">
+            <img
+              class="hero-photo"
+              src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=1100&q=85"
+              alt="Яркие фруктовые сладости"
+              width="1100"
+              height="1012"
+              fetchpriority="high"
+              decoding="async"
+            >
+          </div>
+          <div class="sticker sticker-top">РУЧНАЯ<br>РАБОТА</div>
+          <div class="sticker sticker-bottom">ЯГОДЫ<br>🍓</div>
+          <span class="fruit-dot dot-one" aria-hidden="true">🍊</span>
+          <span class="fruit-dot dot-two" aria-hidden="true">🍋</span>
+          <span class="fruit-dot dot-three" aria-hidden="true">🍒</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         О НАС / ПРЕИМУЩЕСТВА
+         ========================= -->
+    <section class="section benefits" id="about">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">За что нас любят</p>
+          <h2>Состав простой.<br>Вкус — совсем нет.</h2>
+          <p>Мы не прячем вкус фруктов за ароматизаторами. Только понятные ингредиенты и немного магии.</p>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="benefit-card fade-in">
+            <div class="benefit-icon" aria-hidden="true">🍓</div>
+            <h3>Настоящие ягоды</h3>
+            <p>Используем фруктовые и ягодные пюре с насыщенным натуральным вкусом.</p>
+          </article>
+
+          <article class="benefit-card fade-in">
+            <div class="benefit-icon" aria-hidden="true">🌿</div>
+            <h3>Без красителей</h3>
+            <p>Цвет — от самих фруктов и ягод. Никаких искусственных добавок.</p>
+          </article>
+
+          <article class="benefit-card fade-in">
+            <div class="benefit-icon" aria-hidden="true">👐</div>
+            <h3>Всё вручную</h3>
+            <p>Варим небольшими партиями, нарезаем и упаковываем с заботой.</p>
+          </article>
+
+          <article class="benefit-card fade-in">
+            <div class="benefit-icon" aria-hidden="true">✨</div>
+            <h3>Свежая партия</h3>
+            <p>Не храним горы готового товара — готовим мармелад регулярно и свежим.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         КАТАЛОГ
+         ========================= -->
+    <section class="section catalog" id="catalog">
+      <div class="container">
+        <div class="catalog-top section-heading fade-in">
+          <div>
+            <p class="eyebrow">Витрина</p>
+            <h2>Выбирайте свой<br>вкусный повод.</h2>
+            <p>Шесть любимчиков Мармеладной Лавки — от сочных ягод до бодрящих цитрусов.</p>
+          </div>
+        </div>
+
+        <div class="products">
+          <article class="product-card fade-in">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1575377427642-087cf684f29d?auto=format&fit=crop&w=900&q=85"
+                alt="Ягодный мармелад"
+                width="900"
+                height="702"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="tag">ХИТ</span>
+            </div>
+            <div class="product-body">
+              <h3>Ягодный микс</h3>
+              <p>Малина, клубника и чёрная смородина — мягкий кисло-сладкий баланс.</p>
+              <div class="product-bottom">
+                <span class="price">490 ₽</span>
+                <button class="btn btn-primary add-to-cart" type="button" data-product="Ягодный микс">В корзину</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card fade-in">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=900&q=85"
+                alt="Цитрусовый мармелад"
+                width="900"
+                height="702"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="tag">НОВИНКА</span>
+            </div>
+            <div class="product-body">
+              <h3>Цитрусовый бум</h3>
+              <p>Апельсин, лимон и грейпфрут. Ярко, свежо и с приятной горчинкой.</p>
+              <div class="product-bottom">
+                <span class="price">450 ₽</span>
+                <button class="btn btn-primary add-to-cart" type="button" data-product="Цитрусовый бум">В корзину</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card fade-in">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=900&q=85"
+                alt="Вишнёвый мармелад"
+                width="900"
+                height="702"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="tag">ХИТ</span>
+            </div>
+            <div class="product-body">
+              <h3>Вишнёвый сад</h3>
+              <p>Глубокий вишнёвый вкус с лёгкой кислинкой и бархатным послевкусием.</p>
+              <div class="product-bottom">
+                <span class="price">470 ₽</span>
+                <button class="btn btn-primary add-to-cart" type="button" data-product="Вишнёвый сад">В корзину</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card fade-in">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85"
+                alt="Манговый мармелад"
+                width="900"
+                height="702"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="tag">ЭКЗОТИКА</span>
+            </div>
+            <div class="product-body">
+              <h3>Манго-маракуйя</h3>
+              <p>Солнечный тропический дуэт с ароматом спелого манго и маракуйи.</p>
+              <div class="product-bottom">
+                <span class="price">520 ₽</span>
+                <button class="btn btn-primary add-to-cart" type="button" data-product="Манго-маракуйя">В корзину</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card fade-in">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?auto=format&fit=crop&w=900&q=85"
+                alt="Яблочный мармелад"
+                width="900"
+                height="702"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="tag">НЕЖНЫЙ</span>
+            </div>
+            <div class="product-body">
+              <h3>Яблочный сад</h3>
+              <p>Зелёное яблоко и ваниль — нежный, домашний и очень уютный вкус.</p>
+              <div class="product-bottom">
+                <span class="price">430 ₽</span>
+                <button class="btn btn-primary add-to-cart" type="button" data-product="Яблочный сад">В корзину</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card fade-in">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=900&q=85"
+                alt="Клубничный мармелад"
+                width="900"
+                height="702"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="tag">ПОДАРОК</span>
+            </div>
+            <div class="product-body">
+              <h3>Клубничное облако</h3>
+              <p>Нежная клубника с лёгкой кислинкой — тот самый вкус первого лета.</p>
+              <div class="product-bottom">
+                <span class="price">490 ₽</span>
+                <button class="btn btn-primary add-to-cart" type="button" data-product="Клубничное облако">В корзину</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         КАК ЗАКАЗАТЬ
+         ========================= -->
+    <section class="section order" id="order">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">Как заказать</p>
+          <h2>Три шага — и мармелад уже в пути.</h2>
+          <p>Оформить заказ можно онлайн, а если хочется поговорить о вкусах — просто позвоните нам.</p>
+        </div>
+
+        <div class="steps">
+          <article class="step fade-in">
+            <div class="step-number">01</div>
+            <h3>Выбираете</h3>
+            <p>Соберите свою коробку из любимых вкусов или возьмите готовый набор.</p>
+          </article>
+
+          <article class="step fade-in">
+            <div class="step-number">02</div>
+            <h3>Оформляете</h3>
+            <p>Оставьте контакты и удобный способ получения — мы подтвердим заказ.</p>
+          </article>
+
+          <article class="step fade-in">
+            <div class="step-number">03</div>
+            <h3>Получаете</h3>
+            <p>Передаём заказ курьеру или ждём вас в нашей лавке. Осталось только открыть коробку.</p>
+          </article>
+        </div>
+
+        <div class="delivery-note fade-in">
+          <span class="delivery-note-icon" aria-hidden="true">🚚</span>
+          <div class="delivery-note-text">
+            <strong>Доставка от 300 ₽</strong>
+            <span>По городу — в день заказа при оформлении до 16:00. По России отправляем транспортными службами.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         КОНТАКТЫ
+         ========================= -->
+    <section class="section contacts" id="contacts">
+      <div class="container contact-grid">
+        <div class="fade-in">
+          <p class="eyebrow">Мы на связи</p>
+          <h2>Заходите в гости<br>или пишите нам.</h2>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">📍</div>
+              <div>
+                <strong>Адрес</strong>
+                <span>ул. Ягодная, 12, Москва</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">📞</div>
+              <div>
+                <strong>Телефон</strong>
+                <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">✉️</div>
+              <div>
+                <strong>Почта</strong>
+                <a href="mailto:hello@marmeladlavka.ru">hello@marmeladlavka.ru</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">🕐</div>
+              <div>
+                <strong>Часы работы</strong>
+                <span>Пн–Вс: 10:00–20:00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="socials" aria-label="Социальные сети">
+            <a class="social" href="https://vk.com/" target="_blank" rel="noopener" aria-label="ВКонтакте">VK</a>
+            <a class="social" href="https://t.me/" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+            <a class="social" href="https://ok.ru/" target="_blank" rel="noopener" aria-label="Одноклассники">OK</a>
+          </div>
+        </div>
+
+        <form class="contact-form fade-in" id="contactForm">
+          <h3>Есть вопрос?</h3>
+          <p>Оставьте контакты — мы свяжемся с вами и всё подскажем.</p>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Ваше имя</label>
+              <input id="name" name="name" type="text" placeholder="Например, Анна" required>
+            </div>
+
+            <div class="field">
+              <label for="phone">Телефон</label>
+              <input id="phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required>
+            </div>
+
+            <div class="field full">
+              <label for="message">Сообщение</label>
+              <textarea id="message" name="message" placeholder="Например, хочу собрать подарочный набор..."></textarea>
+            </div>
+          </div>
+
+          <button class="btn btn-primary form-submit" type="submit">Отправить сообщение →</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">🍓</span>
+        <span class="brand-name">Мармеладная Лавка</span>
+      </a>
+      <span class="copyright">© 2026 Мармеладная Лавка. Сделано с любовью и ягодами.</span>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Наверх">↑</button>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
