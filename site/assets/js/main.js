@@ -45,19 +45,32 @@ toTop.addEventListener("click", () => {
 // =========================
 const animatedElements = document.querySelectorAll(".fade-in");
 
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        obs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
+// Переиспользуемый наблюдатель для плавного появления
+const animatedObserver = "IntersectionObserver" in window
+  ? new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 })
+  : null;
 
-  animatedElements.forEach(el => observer.observe(el));
+if (animatedObserver) {
+  animatedElements.forEach(el => animatedObserver.observe(el));
 } else {
   animatedElements.forEach(el => el.classList.add("is-visible"));
+}
+
+// Наблюдение за динамически добавленными элементами (карточки каталога)
+function observeNewFadeIns(container) {
+  const targets = container.querySelectorAll(".fade-in");
+  if (animatedObserver) {
+    targets.forEach(el => animatedObserver.observe(el));
+  } else {
+    targets.forEach(el => el.classList.add("is-visible"));
+  }
 }
 
 // =========================
@@ -76,21 +89,8 @@ const cartTotal = document.getElementById("cartTotal");
 const cartItemsLabel = document.getElementById("cartItemsLabel");
 const cartCount = document.getElementById("cartCount");
 
-// Реестр товаров из карточек каталога
-const productCards = document.querySelectorAll(".product-card");
+// Реестр товаров каталога (заполняется из catalog.json)
 const productRegistry = new Map();
-
-productCards.forEach(card => {
-  const name = card.querySelector(".product-body h3")?.textContent.trim();
-  const priceText = card.querySelector(".price")?.textContent || "";
-  const image = card.querySelector("img")?.src || "";
-  if (!name) return;
-  productRegistry.set(name, {
-    name,
-    price: parseInt(priceText.replace(/\D/g, ""), 10) || 0,
-    image
-  });
-});
 
 // Состояние корзины
 let cart = loadCart();
@@ -203,22 +203,78 @@ function renderCart() {
   `).join("");
 }
 
-// Кнопки «В корзину» в каталоге
-const addButtons = document.querySelectorAll(".add-to-cart");
+// =========================
+// КАТАЛОГ ИЗ catalog.json
+// =========================
+const catalogList = document.getElementById("catalogList");
+const CATALOG_URL = "assets/data/catalog.json";
 
-addButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    addToCart(button.dataset.product);
+function renderCatalog(products) {
+  if (!Array.isArray(products) || products.length === 0) {
+    catalogList.innerHTML = `<p class="catalog-error">Каталог пока пуст. Загляните позже ☺</p>`;
+    return;
+  }
 
-    const originalText = button.textContent;
-    button.textContent = "✓ Добавлено";
-    button.style.background = "#9bcf53";
+  productRegistry.clear();
 
-    setTimeout(() => {
-      button.textContent = originalText;
-      button.style.background = "";
-    }, 1100);
-  });
+  catalogList.innerHTML = products.map(product => {
+    const { name, tag, price, description = "", image = "" } = product;
+    if (!name) return "";
+    const safeName = escapeHTML(name);
+
+    productRegistry.set(name, {
+      name,
+      price: Number(price) || 0,
+      image: image || ""
+    });
+
+    return `
+    <article class="product-card fade-in">
+      <div class="product-image">
+        <img src="${escapeHTML(image)}" alt="${safeName}" width="900" height="702" loading="lazy" decoding="async">
+        ${tag ? `<span class="tag">${escapeHTML(tag)}</span>` : ""}
+      </div>
+      <div class="product-body">
+        <h3>${safeName}</h3>
+        <p>${escapeHTML(description)}</p>
+        <div class="product-bottom">
+          <span class="price">${formatPrice(Number(price) || 0)}</span>
+          <button class="btn btn-primary add-to-cart" type="button" data-product="${safeName}">В корзину</button>
+        </div>
+      </div>
+    </article>`;
+  }).join("");
+
+  observeNewFadeIns(catalogList);
+}
+
+async function loadCatalog() {
+  try {
+    const response = await fetch(CATALOG_URL, { cache: "no-store" });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+    renderCatalog(data.products || []);
+  } catch (error) {
+    catalogList.innerHTML = `<p class="catalog-error">Не удалось загрузить каталог. Запустите проект через Vite (npm run start) и обновите страницу.</p>`;
+    console.error("Ошибка загрузки каталога:", error);
+  }
+}
+
+// Кнопки «В корзину» (делегирование — карточки создаются динамически)
+catalogList.addEventListener("click", event => {
+  const button = event.target.closest(".add-to-cart");
+  if (!button) return;
+
+  addToCart(button.dataset.product);
+
+  const originalText = button.textContent;
+  button.textContent = "✓ Добавлено";
+  button.style.background = "#9bcf53";
+
+  setTimeout(() => {
+    button.textContent = originalText;
+    button.style.background = "";
+  }, 1100);
 });
 
 // Открытие / закрытие панели
@@ -306,6 +362,9 @@ function showToast(message) {
 
 // Первичная отрисовка
 renderCart();
+
+// Загрузка каталога из catalog.json
+loadCatalog();
 
 // =========================
 // ФОРМА ОБРАТНОЙ СВЯЗИ

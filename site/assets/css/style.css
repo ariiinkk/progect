@@ -1238,6 +1238,15 @@ h3 {
   transform: translateY(0);
 }
 
+.catalog-loading,
+.catalog-error {
+  grid-column: 1 / -1;
+  padding: 34px 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 /* =========================
    АДАПТИВНОСТЬ
    ========================= */
